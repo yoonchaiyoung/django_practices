@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'helloworld',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'django_practices.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,15 +75,15 @@ WSGI_APPLICATION = 'django_practices.wsgi.application'
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
-    	'default': {
- 	        'ENGINE': 'django.db.backends.mysql',
-        	'NAME': 'webdb',
-        	'USER': 'webdb',
-        	'PASSWORD': 'webdb',
-        	'HOST': '192.168.1.138',
-        	'PORT': 3306
-    		}
-	}
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'webdb',
+        'USER': 'webdb',
+        'PASSWORD': 'webdb',
+        'HOST': '192.168.1.138',
+        'PORT': 3306
+    }
+}
 
 
 # Password validation

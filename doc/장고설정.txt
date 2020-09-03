@@ -82,4 +82,3 @@ python manage.py createsuperuser
 
 
 
-

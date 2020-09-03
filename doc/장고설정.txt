@@ -76,8 +76,8 @@ python manage.py createsuperuser
     3) Application 등록
         settings.py의 INSTALLED_APPS 에 추가 한다.
     -----------------------------------------------------------------------------
-    4) /hello url mapping (urls.py)
-
+    4) url mapping (urls.py)    url <---> view의 함수
+    5) view 함수에서 template에 data전달 및 render 결과 반환
     -----------------------------------------------------------------------------
 3. emaillist Application 만들기
     1) 터미널에서
@@ -85,6 +85,10 @@ python manage.py createsuperuser
     2) templates/emaillist 디렉토리 생성
     3) Application 등록
         settings.py의 INSTALLED_APPS 에 'helloworld'추가 한다.
+    -----------------------------------------------------------------------------
+    4) url mapping (urls.py)    url <---> view의 함수
+    5) view 함수에서 template에 data전달 및 render 결과 반환
+    -----------------------------------------------------------------------------
 
 
 4. guestbook Application 만들기

@@ -17,6 +17,19 @@ def fetchlist():
     return results
 
 
+def insert(first_name, last_name, email):
+    db = conn()
+    cursor = db.cursor()
+
+    sql = 'insert emaillist values(null, %s, %s, %s)'
+    cursor.execute(sql, (first_name, last_name, email))
+    db.commit()
+
+    cursor.close()
+    db.close()
+
+
+
 def conn():
     return connect(
         user='webdb',

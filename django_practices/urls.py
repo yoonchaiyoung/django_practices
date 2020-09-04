@@ -16,17 +16,22 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-import helloworld.views as helloworld_views
-import emaillist.views as emaillist_views
+import helloworld.views as helloworldviews
+import emaillist.views as emaillistviews
+import guestbook.views as guestbookviews
+
+
 
 urlpatterns = {
-    path('hello/', helloworld_views.hello),
-    path('hello2/', helloworld_views.hello2),
-    path('hello3/', helloworld_views.hello3),
+    path('hello/', helloworldviews.hello),
+    path('hello2/', helloworldviews.hello2),
+    path('hello3/', helloworldviews.hello3),
 
-    path('emaillist/', emaillist_views.index),
-    path('emaillist/form', emaillist_views.form),
-    path('emaillist/add', emaillist_views.add),
+    path('emaillist/', emaillistviews.index),
+    path('emaillist/form', emaillistviews.form),
+    path('emaillist/add', emaillistviews.add),
+
+    path('guestbook/', guestbookviews.index),
 
     path('admin/', admin.site.urls),
 }

@@ -28,7 +28,7 @@
 				<td>{{	guestbooklist | length | sub:forloop.counter | add:1	}}</td>
 				<td>{{	guestbook.name }}</td>
 				<td>{{	guestbook.reg_date	}}</td>
-				<td><a href="/guestbook/deleteform">삭제</a></td>
+				<td><a href="/guestbook/deleteform?no={{  guestbook.no  }}">삭제</a></td>
 			</tr>
 			<tr>
 				<td colspan=4>{{	guestbook.message | linebreaksbr	}}</td>

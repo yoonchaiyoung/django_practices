@@ -14,5 +14,12 @@ def test_guestbookmodel_fetchlist():
     print(results)
 
 
+def test_guestbookmodel_delete():
+    guestbookmodel.delete(6, '1234')
+
+
+
+# test_guestbookmodel_insert()
 # test_guestbookmodel_fetchlist()
-test_guestbookmodel_insert()
+
+test_guestbookmodel_delete()

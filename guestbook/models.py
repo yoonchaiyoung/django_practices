@@ -41,7 +41,21 @@ def insert(name, password, message):
     cursor.close()
     conn.close()
 
+def delete(no, password):
+    conn = getconnection()
+    cursor = conn.cursor()
 
+    sql = '''
+        delete 
+        from guestbook 
+        where no=%s and password=%s
+    '''
+    cursor.execute(sql, (no, password))
+    conn.commit()
+
+    # 자원 정리
+    cursor.close()
+    conn.close()
 
 
 def getconnection():

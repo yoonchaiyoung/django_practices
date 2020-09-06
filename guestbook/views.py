@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
 from django.shortcuts import render
 
 import guestbook.models as guestbookmodel
@@ -13,4 +13,21 @@ def index(request):
 
 def add(request):
     print(request.POST)
+    name = request.POST['name']
+    password = request.POST['password']
+    message = request.POST['message']
+
+    guestbookmodel.insert(name, password, message)
+
+    return HttpResponseRedirect('/guestbook')
+
+
+
+def deleteform(request):
+    return render(request, 'guestbook/deleteform.html')
+
+def delete(request):
+    print(request.POST)
     return HttpResponse('ok', content_type='text/html')
+
+

@@ -32,6 +32,7 @@ urlpatterns = {
     path('emaillist/add', emaillistviews.add),
 
     path('guestbook/', guestbookviews.index),
+    path('guestbook/add', guestbookviews.add),
 
     path('admin/', admin.site.urls),
 }

@@ -31,7 +31,7 @@ settings.py 설정
         	'NAME': 'webdb',
         	'USER': 'webdb',
         	'PASSWORD': 'webdb',
-        	'HOST': '198.168.1.138',
+        	'HOST': '192.168.1.138',
         	'PORT': 3306
     		}
 	}
